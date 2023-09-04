@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe game</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <span onclick="reset(9)" class="bt" id="reset"> Reset </span>
+      <span class="bt opt selected"> One player </span>
+      <span  class="bt opt"> Two player </span>
+      <span id="playerX"> &nbsp; X: 0 &nbsp; </span>
+      <span id="playerO"> &nbsp; O: 0 &nbsp; </span>
+    </nav>
+    <div id="boxContainer">
+      <div id="player">
+        <p>Choose player</p>
+        <div id="playerButton">
+          <button class="player" onclick="choosePlayer('X')">X</button>
+          <button class="player" onclick="choosePlayer('O')">O</button>
+        </div>
+      </div>
+      <div class="box">
+        <div onclick="singlePlayer(0); twoPlayer(0)" class="boxItem"></div>
+        <div onclick="singlePlayer(1); twoPlayer(1)" class="boxItem"></div>
+        <div onclick="singlePlayer(2); twoPlayer(2)"  class="boxItem"></div>
+      </div>
+      <div class="box">
+        <div onclick="singlePlayer(3); twoPlayer(3)" class="boxItem"></div>
+        <div onclick="singlePlayer(4); twoPlayer(4)" class="boxItem"></div>
+        <div onclick="singlePlayer(5); twoPlayer(5)" class="boxItem"></div>
+      </div>
+      <div class="box">
+        <div onclick="singlePlayer(6); twoPlayer(6)" class="boxItem"></div>
+        <div onclick="singlePlayer(7); twoPlayer(7)" class="boxItem"></div>
+        <div onclick="singlePlayer(8); twoPlayer(8)" class="boxItem"></div>
+      </div>
+
+      <p style="margin-top: 2rem; color:rgb(29, 135, 135); font-size:1.5rem;" id="matchWon"></p>
+
+      <div id="playAgain">
+        <button id="playAgainButton" onclick="playAgain(9)">Play again</button>
+      </div>
+
+           
+    </div>
+
+   
+
+
+    <script src="./script.js"></script>
+  </body>
+</html>
